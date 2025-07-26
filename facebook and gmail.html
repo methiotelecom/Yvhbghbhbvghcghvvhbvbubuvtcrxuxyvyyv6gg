@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Auth Buttons</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .auth-buttons {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .auth-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .facebook {
+      background-color: #1877f2;
+      color: white;
+    }
+
+    .facebook:hover {
+      background-color: #145dbf;
+    }
+
+    .google {
+      background-color: white;
+      color: #444;
+      border: 1px solid #ccc;
+    }
+
+    .google:hover {
+      background-color: #f7f7f7;
+    }
+
+    .auth-button svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 500px) {
+      .auth-buttons {
+        padding: 20px;
+      }
+
+      .auth-button {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-buttons">
+    <button onclick="window.location.href='facebook.html'"class="auth-button facebook">
+      <!-- Facebook SVG Icon -->
+      <svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <path d="M19 6h5V0h-5c-5 0-9 4-9 9v4H5v6h5v13h6V19h5l1-6h-6v-3c0-1 1-2 2-2z"/>
+      </svg>
+      Use Facebook
+    </button>
+
+    <button onclick="window.location.href='gmail.html'"class="auth-button google">
+      <!-- Gmail SVG Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+        <path fill="#ea4335" d="M24 9.5L6 21V42h36V21L24 9.5z"/>
+        <path fill="#fff" d="M24 27L6 15v6l18 12 18-12v-6L24 27z"/>
+      </svg>
+      Use Gmail
+    </button>
+  </div>
+</body>
+</html>
